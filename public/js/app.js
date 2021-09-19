@@ -19432,8 +19432,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /mnt/Project/Laravel/Movie-Man/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /mnt/Project/Laravel/Movie-Man/resources/css/style.css */"./resources/css/style.css");
+__webpack_require__(/*! /mnt/Project/Laravel/Movie-Map/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /mnt/Project/Laravel/Movie-Map/resources/css/style.css */"./resources/css/style.css");
 
 
 /***/ })

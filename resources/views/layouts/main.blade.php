@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{env('APP_NAME')}}</title>
     <link rel="stylesheet" href="/css/style.css">
+    <livewire:styles />
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans bg-gray-900 text-white">
 <!-- Navbar goes here -->
@@ -24,22 +26,22 @@
                     <div class="hidden md:flex items-center space-x-1">
                         <ul class="flex item-center">
                             <li class="ml-16">
-                                <a href="#" class="hover:text-gray-300 capitalize">
+                                <a href="{{route('index')}}" class="hover:text-gray-300 capitalize">
                                     movies
                                 </a>
                             </li>
                             <li class="ml-6">
-                                <a href="#" class="hover:text-gray-300 capitalize">
+                                <a href="{{route('tv-shows')}}" class="hover:text-gray-300 capitalize">
                                     TV Shows
                                 </a>
                             </li>
                             <li class="ml-6">
-                                <a href="#" class="hover:text-gray-300 capitalize">
+                                <a href="{{route('actors')}}" class="hover:text-gray-300 capitalize">
                                     actors
                                 </a>
                             </li>
                             <li class="ml-6">
-                                <a href="#" class="hover:text-gray-300 capitalize">
+                                <a href="{{route('about')}}" class="hover:text-gray-300 capitalize">
                                     about
                                 </a>
                             </li>
@@ -49,12 +51,7 @@
                 <!-- Secondary Navbar items -->
                 <div class="hidden md:flex items-center space-x-3 ">
                     <div class="flex item-center">
-                        <div class="relative">
-                            <input type="text" class="bg-gray-800 rounded-full w-64 pl-8 px-4 py-1 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent" placeholder="Search">
-                            <div class="absolute top-0">
-                                <svg class="fill-current w-4 text-gray-500 mt-2 ml-2" viewBox="0 0 24 24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 01-1.42 1.4l-5.38-5.38a8 8 0 111.41-1.41zM10 16a6 6 0 100-12 6 6 0 000 12z"/></svg>
-                            </div>
-                        </div>
+                        <livewire:search-dropdown />
                     </div>
     {{--                <div class="login_signup flex item-center">--}}
     {{--                    <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>--}}
@@ -82,10 +79,10 @@
         <!-- mobile menu -->
         <div class="hidden mobile-menu">
             <ul class="">
-                <li class=""><a href="index.html" class="block text-sm px-2 py-4 text-white hover:bg-gray-800 font-semibold">Movie</a></li>
-                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300">TV Show</a></li>
-                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300">Actor</a></li>
-                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300">about</a></li>
+                <li class=""><a href="{{route('index')}}" class="block text-sm px-2 py-4 text-white hover:bg-gray-800 font-semibold capitalize">Movie</a></li>
+                <li><a href="#{{route('tv-shows')}}" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300 capitalize">TV Show</a></li>
+                <li><a href="{{route('actors')}}" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300 capitalize">Actor</a></li>
+                <li><a href="{{route('about')}}" class="block text-sm px-2 py-4 hover:bg-gray-800 transition duration-300 capitalize">about</a></li>
             </ul>
             <div class="relative py-4 px-2">
                 <input type="text" class="bg-gray-800 rounded-full w-64 pl-8 px-4 py-1 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent" placeholder="Search">
@@ -104,5 +101,8 @@
         </script>
     </nav>
     @yield('content')
+
+
+    <livewire:scripts />
 </body>
 </html>
