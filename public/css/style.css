@@ -526,14 +526,14 @@ samp {
  *    CSS Remedy, with `svg` added as well.
  *
  *    https://github.com/mozdevs/cssremedy/issues/14
- * 
+ *
  * 2. Add `vertical-align: middle` to align replaced elements more
  *    sensibly by default when overriding `display` by adding a
  *    utility like `inline`.
  *
  *    This can trigger a poorly considered linting error in some
  *    tools but is included by design.
- * 
+ *
  *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 
@@ -188515,3 +188515,78 @@ video {
             animation: spinAround 500ms infinite linear;
   }
 }
+
+
+/**
+my code start from here
+*/
+
+.hero-section{
+        background-image: url('/img/hero.jpg');
+        background-repeat: no-repeat;
+        min-height: 300px;
+        height: calc(100vh / 2.5);
+        max-height: 360px;
+        background-position: top center;
+        background-size: cover;
+        color: #fff;
+        padding: 50px;
+        text-align: right;
+    }
+    .welcome-text{
+        font-size: 40px;
+        font-weight: 800;
+        padding-bottom: 15px;
+    }
+    .brand-text{
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 30px;
+    }
+
+    .hero-section .relative input{
+        width: 100%;
+        background: #ffffff;
+    }
+
+        #scroll-progress {
+        background: #f59e0f;
+        height: 6px;
+        margin-top: 32px;
+        width: 0;
+    }
+
+    #scroller {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        white-space: nowrap;
+    }
+    #scroller li {
+        background: #b0bec5;
+        color: #fff;
+        display: inline-block;
+        font-size: 80px;
+        font-weight: bold;
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+        text-align: center;
+    }
+
+    .section-header{
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 40px;
+        color: #f59e0f;
+        text-transform: capitalize;
+    }
+
+    footer{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(7,99,117,1) 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
