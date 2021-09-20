@@ -76,36 +76,79 @@
             </section>
 
             <section class="leaderboard pb-16">
-                <h1 class="section-header">trending</h1>
+                <h1 class="section-header">All Time Leaderboard</h1>
                 <div class="pt-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
-                    <div class="">
-                        <h6 class="mr-8 mt-1">Avengers</h6>
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Shawshank Redemption (1994) </h6>
                         <div class="shadow w-full bg-yellow-500 mt-2">
-                            <div class="bg-green-800 text-xs leading-none py-1 text-center text-white" style="width: 75%">75%</div>
+                            <div class="bg-green-800 text-xs leading-none py-1 text-center text-white" style="width: 93%">93%</div>
                         </div>
                     </div>
 
-                    <div class="">
-                        <h6 class="mr-8 mt-1">F9</h6>
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Godfather (1972) </h6>
                         <div class="shadow w-full bg-yellow-500 mt-2">
-                            <div class="bg-pink-800 text-xs leading-none py-1 text-center text-white" style="width: 45%">45%</div>
+                            <div class="bg-indigo-800 text-xs leading-none py-1 text-center text-white" style="width: 90%">90%</div>
                         </div>
                     </div>
 
-                    <div class="">
-                        <h6 class="mr-8 mt-1">Avengers</h6>
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Godfather: Part II (1974) </h6>
                         <div class="shadow w-full bg-yellow-500 mt-2">
-                            <div class="bg-blue-800 text-xs leading-none py-1 text-center text-white" style="width: 85%">85%</div>
+                            <div class="bg-pink-800 text-xs leading-none py-1 text-center text-white" style="width: 87%">87%</div>
                         </div>
                     </div>
 
-                    <div class="">
-                        <h6 class="mr-8 mt-1">Avengers</h6>
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Dark Knight (2008) </h6>
                         <div class="shadow w-full bg-yellow-500 mt-2">
-                            <div class="bg-red-800 text-xs leading-none py-1 text-center text-white" style="width: 65%">65%</div>
+                            <div class="bg-blue-800 text-xs leading-none py-1 text-center text-white" style="width: 83%">83%</div>
                         </div>
                     </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">Angry Men (1957) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-red-800 text-xs leading-none py-1 text-center text-white" style="width: 85%">85%</div>
+                        </div>
+                    </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">Schindler's List (1993) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-purple-800 text-xs leading-none py-1 text-center text-white" style="width: 78%">78%</div>
+                        </div>
+                    </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Lord Of The Rings: The Return Of The King (2003) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-gray-800 text-xs leading-none py-1 text-center text-white" style="width: 89%">89%</div>
+                        </div>
+                    </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">Pulp Fiction (1994) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-red-500 text-xs leading-none py-1 text-center text-white" style="width: 83%">83%</div>
+                        </div>
+                    </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Good, The Bad And The Ugly (1966) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-pink-400 text-xs leading-none py-1 text-center text-white" style="width: 75%">75%</div>
+                        </div>
+                    </div>
+
+                    <div class="l-item">
+                        <h6 class="mr-8 mt-1">The Lord Of The Rings: The Fellowship Of The Rings (2001) </h6>
+                        <div class="shadow w-full bg-yellow-500 mt-2">
+                            <div class="bg-blue-100 text-xs leading-none py-1 text-center text-white" style="width: 72%">72%</div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
