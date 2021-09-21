@@ -7,8 +7,8 @@ Route::view('/','website')->name('website');
 Route::get('/movies','MoviesController@index')->name('index');
 Route::get('/movies/{movie}','MoviesController@show')->name('single-movie');
 
-Route::get('/tv-shows','MoviesController@index')->name('tv-shows');
-Route::get('/tv-shows/{id}','MoviesController@show')->name('tv-show');
+Route::get('/tv-shows','TvController@index')->name('tv-shows');
+Route::get('/tv-shows/{id}','TvController@show')->name('tv-show');
 
 Route::get('/actors','ActorsController@index')->name('actors');
 Route::get('/actors/page/{page?}', 'ActorsController@index');
