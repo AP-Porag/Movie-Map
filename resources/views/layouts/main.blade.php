@@ -6,7 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{env('APP_NAME')}}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/movie-clapper.png">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
     <livewire:styles />
     <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
 </head>

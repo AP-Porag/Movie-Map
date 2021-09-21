@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/','website')->name('website');
+Route::get('/','HomePageController@index')->name('website');
 
 Route::get('/movies','MoviesController@index')->name('index');
 Route::get('/movies/{movie}','MoviesController@show')->name('single-movie');

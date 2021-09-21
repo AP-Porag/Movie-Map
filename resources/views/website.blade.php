@@ -13,66 +13,45 @@
                 <h1 class="section-header">what's popular</h1>
                 <div id="scroll-progress"></div>
                 <ul id="scroller">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
+                    @foreach($popularMovies as $popular)
+                        <li>
+                            <div class="mt-8">
+                                <a href="{{route('single-movie',$popular['id'])}}">
+                                    <img src="{{'https://image.tmdb.org/t/p/w500/'.$popular['poster_path']}}" alt="parasite" class="hover:opacity-75 transition ease-in-out duration-150">
+                                </a>
+                                <div class="mt-2 popular_movie_box">
+                                    <a href="{{route('single-movie',$popular['id'])}}" class="text-lg mt-2 hover:text-gray-300 capitalize">{{$popular['title']}}</a>
+                                    <div class="flex items-center text-gray-400 text-sm mt-1">
+                                        <svg class="fill-current text-yellow-500 w-4" viewBox="0 0 24 24"><g data-name="Layer 2"><path d="M17.56 21a1 1 0 01-.46-.11L12 18.22l-5.1 2.67a1 1 0 01-1.45-1.06l1-5.63-4.12-4a1 1 0 01-.25-1 1 1 0 01.81-.68l5.7-.83 2.51-5.13a1 1 0 011.8 0l2.54 5.12 5.7.83a1 1 0 01.81.68 1 1 0 01-.25 1l-4.12 4 1 5.63a1 1 0 01-.4 1 1 1 0 01-.62.18z" data-name="star"/></g></svg>
+                                        <span class="ml-1">{{$popular['vote_average']}}</span>
+                                        <span class="mx-2">|</span>
+                                        <span>{{$popular['release_date']}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </section>
 
             <section class="trending-trailer">
-                <h1 class="section-header">trending trailer</h1>
-                <div id="scroll-progress"></div>
-                <ul id="scroller">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                </ul>
-            </section>
-
-            <section class="all-trending">
-                <h1 class="section-header">trending</h1>
-                <div id="scroll-progress"></div>
-                <ul id="scroller">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                </ul>
+                <h1 class="section-header">trending Now</h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    @foreach($AllTrending as $trending)
+                        <div class="mt-8">
+                            <a href="{{$trending['media_type'] === 'movie' ? route('single-movie', $trending['id']) : route('tv-show', $trending['id'])}}">
+                                <img src="{{'https://image.tmdb.org/t/p/w500/'.$trending['poster_path']}}" alt="parasite" class="hover:opacity-75 transition ease-in-out duration-150">
+                            </a>
+                            <div class="mt-2">
+                                <a href="{{$trending['media_type'] === 'movie' ? route('single-movie', $trending['id']) : route('tv-show', $trending['id'])}}" class="text-lg mt-2 hover:text-gray-300 capitalize">{{$trending['media_type'] === 'movie' ? $trending['title'] : $trending['name']}}</a>
+                                <div class="flex items-center text-gray-400 text-sm mt-1">
+                                    <svg class="fill-current text-yellow-500 w-4" viewBox="0 0 24 24"><g data-name="Layer 2"><path d="M17.56 21a1 1 0 01-.46-.11L12 18.22l-5.1 2.67a1 1 0 01-1.45-1.06l1-5.63-4.12-4a1 1 0 01-.25-1 1 1 0 01.81-.68l5.7-.83 2.51-5.13a1 1 0 011.8 0l2.54 5.12 5.7.83a1 1 0 01.81.68 1 1 0 01-.25 1l-4.12 4 1 5.63a1 1 0 01-.4 1 1 1 0 01-.62.18z" data-name="star"/></g></svg>
+                                    <span class="ml-1">{{$trending['vote_average']}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </section>
 
             <section class="leaderboard pb-16">
