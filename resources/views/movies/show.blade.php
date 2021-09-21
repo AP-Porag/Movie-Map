@@ -65,7 +65,9 @@
                                     </div>
                                     <div class="modal-body px-8 py-8">
                                         <div class="responsive-container overflow-hidden relative" style="padding-top: 56.25%">
+                                            @if($movie['videos']['results'])
                                             <iframe class="responsive-iframe absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/{{ $movie['videos']['results'][0]['key'] }}" style="border:0;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -82,11 +84,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     @foreach($movie['cast'] as $cast)
                         <div class="mt-8">
-                            <a href="#">
+                            <a href="{{ route('actor', $cast['id']) }}">
                                 <img src="{{'https://image.tmdb.org/t/p/w300'.$cast['profile_path']}}" alt="actor1" class="hover:opacity-75 transition ease-in-out duration-150">
                             </a>
                             <div class="mt-2">
-                                <a href="#" class="text-lg mt-2 hover:text-gray:300">{{$cast['name']}}</a>
+                                <a href="{{ route('actor', $cast['id']) }}" class="text-lg mt-2 hover:text-gray:300">{{$cast['name']}}</a>
                                 <div class="text-sm text-gray-400">
                                     {{$cast['character']}}
                                 </div>
