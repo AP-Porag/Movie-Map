@@ -7,3 +7,14 @@
 .hero-section .relative input{
     color: #111827;
 }
+
+/*responsive CSS*/
+@media (min-width:320px) and (max-width:575px) {
+    .welcome-text{
+        font-size: 30px;
+        padding-bottom: 0;
+    }
+    .brand-text{
+        font-size: 20px;
+    }
+}

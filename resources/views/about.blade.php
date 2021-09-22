@@ -7,7 +7,7 @@
                     <!-- Website Logo -->
                     <div class="content">
                         <h2>Hi there,</h2>
-                        <img class="image" src="{{asset('img/about-hero.png')}}" width="902" height="298">
+                        <img class="image" src="{{asset('img/about-hero.png')}}">
 
                         <h3>Let's talk about this app</h3>
                     </div>
@@ -195,4 +195,38 @@
         font-weight: 700;
         text-transform: capitalize;
     }
+    @media (min-width:320px) and (max-width:575px) {
+        .content{
+            width: auto;
+        }
+        .content h2{
+            font-size: 5em;
+        }
+
+        .content h3{
+            font-size: 1em;
+        }
+        .content .image{
+            width: 335px;
+            height: auto;
+        }
+    }
+
+    @media (min-width:576px) and (max-width:767px) {
+        .content{
+            width: auto;
+        }
+        .content h2{
+            font-size: 7em;
+        }
+
+        .content h3{
+            font-size: 2em;
+        }
+        .content .image{
+            width: 610px;
+            height: auto;
+        }
+    }
+
 </style>
